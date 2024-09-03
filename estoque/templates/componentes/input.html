@@ -1,0 +1,12 @@
+{% load form_extras %}
+<div class="form-group">
+    {{ field.label_tag }}
+    {% input_with_classes field class %}
+    {% if field.errors %}
+        <div class="text-sm text-danger">
+            {% for error in field.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>

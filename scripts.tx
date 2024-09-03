@@ -1,0 +1,6 @@
+venv\Scripts\activate - ativar venv
+python manage.py makemigrations - gerar arquivos de alteracao no bd 
+python manage.py migrate - aplica as alteracoes no bd
+catalago - listagem com cards de produtos
+delete
+edit
