@@ -4,3 +4,5 @@ python manage.py migrate - aplica as alteracoes no bd
 catalago - listagem com cards de produtos
 delete
 edit
+python manage.py runserver
+pip install -r requirements.txt

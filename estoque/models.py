@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 
-User = get_user_model()
+Usuario = get_user_model()
 
 class Base(models.Model):
 
@@ -61,7 +61,7 @@ class Endereco(models.Model):
 
 
 class PerfilUsuario(models.Model):
-    usuario = models.OneToOneField(User, on_delete=models.CASCADE)
-    endereco = models.ForeignKey(Endereco, on_delete=models.CASCADE)
+    usuario = models.OneToOneField(Usuario, on_delete=models.CASCADE, related_name='perfil_usuario')
+    endereco = models.OneToOneField(Endereco, on_delete=models.CASCADE, related_name='perfil_usuario')
     telefone = models.CharField(max_length=255)
 
