@@ -7,6 +7,11 @@ class ProdutoViewSet(ModelViewSet):
     def get_queryset(self):
         return Produto.objects.all()
     
+class ProdutoPerecivelViewSet(ModelViewSet):
+    serializer_class = ProdutoPerecivelSerializer
+    def get_queryset(self):
+        return ProdutoPerecivel.objects.all()
+    
 class UsuarioViewSet(ModelViewSet):
     serializer_class = UsuarioSerializer
     def get_queryset(self):

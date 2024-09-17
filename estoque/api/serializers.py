@@ -1,10 +1,15 @@
 from rest_framework import serializers
-from ..models import Endereco, Lote, PerfilUsuario, Usuario, Produto
+from ..models import *
 
 
 class ProdutoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Produto
+        fields = '__all__'
+
+class ProdutoPerecivelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProdutoPerecivel
         fields = '__all__'
 
 
